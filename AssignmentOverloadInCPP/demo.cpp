@@ -30,7 +30,7 @@ public:
 		cout << "编号 : " << m_bh << " 姓名 ：" << m_name <<", *m_ptr="<< *m_ptr << ", m_ptr=" <<m_ptr<< endl;
 	}
 
-	CGirl& operator=(const CGirl& g)  //深拷贝赋值重载
+	CGirl& operator=(const CGirl& g)  //深拷贝赋值重载,涉及堆内存的赋值需要使用深拷贝
 	{
 		if (this == &g) return *this;  //判断类是否相等，相等就不需要执行
 		if (g.m_ptr == nullptr)  //如果源对象为空，则清空对象的内存和指针
